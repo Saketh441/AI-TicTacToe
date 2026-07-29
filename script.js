@@ -195,8 +195,7 @@ async function saveGame(winner, result) {
     const game = {
         playerName: "Saketh",
         winner: winner,
-        result: result,
-        playedAt: new Date().toISOString()
+        result: result
     };
 
     try {

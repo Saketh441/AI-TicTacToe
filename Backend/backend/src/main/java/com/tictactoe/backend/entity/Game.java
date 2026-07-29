@@ -5,8 +5,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
 import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
 @Entity
 @Table(name = "game_result")
 public class Game {
@@ -21,8 +22,8 @@ public class Game {
     private String winner;
 
     private String result;
-
-    @Column(name = "Played_at")
+    @CreationTimestamp
+    @Column(name = "Played_at",updatable = false)
     private LocalDateTime playedAt;
 
     public Game() {
